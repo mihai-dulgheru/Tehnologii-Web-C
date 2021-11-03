@@ -1,15 +1,46 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script>
+        if (document.addEventListener) {
+            document.addEventListener(
+                "contextmenu",
+                function (e) {
+                    which(e);
+                    e.preventDefault();
+                },
+                false
+            );
+        }
+
+        function which(event) {
+            switch (event.button) {
+                case 0:
+                    console.log("Left button clicked.");
+                    break;
+                case 1:
+                    console.log("Middle button clicked.");
+                    break;
+                case 2:
+                    console.log("Right button clicked.");
+                    break;
+
+                default:
+                    alert("Unexpected code: " + event.button);
+                    break;
+            }
+        }
+    </script>
 </head>
 
 <body>
-
+    <form>
+        <input type="button" value="click me" onclick="which(event)" />
+    </form>
 </body>
 
 </html>
