@@ -1,0 +1,16 @@
+<html>
+
+<head>
+    <script>
+        try {
+            console.log('first')
+            console.log('second')
+            throw new Error('some error')
+            console.log('third')
+        } catch (error) {
+            console.warn(error)
+        }
+    </script>
+</head>
+
+</html>

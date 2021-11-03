@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <script>
+        function g(base) {
+            return function (x) {
+                base += x
+                // return base
+                console.log(base);
+            }
+        }
+
+        let tenBasedAdder = g(10)
+        let hundredBasedAdder = g(100)
+
+        tenBasedAdder(1)
+        tenBasedAdder(1)
+        tenBasedAdder(1)
+        hundredBasedAdder(1)
+        tenBasedAdder(1)
+
+    </script>
+</head>
+
+</html>
