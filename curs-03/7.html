@@ -1,18 +1,16 @@
 <html>
+    <head>
+        <script>
+            function f0() {
+                let n;
+                setTimeout(() => {
+                    n = 100;
+                }, 1000);
+                return n;
+            }
 
-<head>
-    <script>
-        function f0() {
-            let n
-            setTimeout(() => {
-                n = 100
-            }, 1000)
-            return n
-        }
-
-        let result = f0()
-        console.log(result)
-    </script>
-</head>
-
+            let result = f0();
+            console.log(result);
+        </script>
+    </head>
 </html>

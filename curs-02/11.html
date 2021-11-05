@@ -1,25 +1,22 @@
 <html>
-
-<head>
-    <script>
-        // function g(base) {
-        //     let f = function () {
-        //         console.log('inside ' + base);
-        //     }
-        //     f()
-        // }
-        function g(base) {
-            let f = function () {
-                let k = 5
-                console.log('inside ' + base);
+    <head>
+        <script>
+            // function g(base) {
+            //     let f = function () {
+            //         console.log('inside ' + base);
+            //     }
+            //     f()
+            // }
+            function g(base) {
+                let f = function () {
+                    let k = 5;
+                    console.log("inside " + base);
+                };
+                return f;
             }
-            return f
-        }
 
-        let f1 = g(10)
-        f1()
-
-    </script>
-</head>
-
+            let f1 = g(10);
+            f1();
+        </script>
+    </head>
 </html>
