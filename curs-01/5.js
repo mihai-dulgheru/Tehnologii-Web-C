@@ -1,23 +1,23 @@
-if (!"") {
-    console.log("empty string false")
+if (!'') {
+  console.log('empty string false')
 }
 
 if (!0) {
-    console.log("0 false")
+  console.log('0 false')
 }
 
 if (!NaN) {
-    console.log("NaN false")
+  console.log('NaN false')
 }
 
 if (!false) {
-    console.log("false false")
+  console.log('false false')
 }
 
 if (!null) {
-    console.log("null false")
+  console.log('null false')
 }
 
 if (!undefined) {
-    console.log("undefined false")
+  console.log('undefined false')
 }

@@ -1,4 +1,4 @@
-let a = [0, 1, 2, 3, 4]
+const a = [0, 1, 2, 3, 4]
 
 console.log(a[3])
 console.log(a[9])

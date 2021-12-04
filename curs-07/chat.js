@@ -1,25 +1,25 @@
-const net = require('net');
+const net = require('net')
 
-const server = net.createServer();
+const server = net.createServer()
 
-const clients = [];
+const clients = []
 
 server.on('connection', (client) => {
-    clients.push(client);
-    client.write('Welcome to the chat! \n');
+  clients.push(client)
+  client.write('Welcome to the chat! \n')
 
-    client.on('data', (data) => {
-        for (let i = 0; i < clients.length; i++) {
-            if (clients[i] != client) {
-                clients[i].write(data);
-            }
-        }
-    });
+  client.on('data', (data) => {
+    for (let i = 0; i < clients.length; i++) {
+      if (clients[i] != client) {
+        clients[i].write(data)
+      }
+    }
+  })
 
-    client.on('end', () => {
-        const index = clients.findIndex(e => e === client);
-        clients.splice(index, 1);
-    });
-});
+  client.on('end', () => {
+    const index = clients.findIndex(e => e === client)
+    clients.splice(index, 1)
+  })
+})
 
-server.listen(3333);
+server.listen(3333)

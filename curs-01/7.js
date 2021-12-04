@@ -1,17 +1,17 @@
-let o = {
-    a: 1,
-    b: 'somestring'
+const o = {
+  a: 1,
+  b: 'somestring'
 }
 
 console.log(o)
 
-function f() {
-    console.log('I\'m a little function')
+function f () {
+  console.log('I\'m a little function')
 }
 
 f()
 
-let f1 = f
+const f1 = f
 
 f1()
 
