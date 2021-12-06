@@ -22,8 +22,19 @@ const Author = sequelize.define('author', {
   }
 })
 
-sequelize.sync().then(() => {
-  console.warn('tables created')
+const Message = sequelize.define('message', {
+  title: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  content: {
+    type: Sequelize.TEXT
+  }
 })
 
-// TODO
+Author.hasMany(Message)
+
+sequelize
+  .sync({ force: true })
+  .then(() => console.log('created'))
+  .catch((error) => console.log(error))
