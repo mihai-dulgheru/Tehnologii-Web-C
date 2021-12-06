@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "f68029f7-c618-483c-887c-9e03c07b2b11",
+		"name": "C7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[GET] WIDGETS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/widget-api/widgets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"widget-api",
+						"widgets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] WIDGETS SIMPLIFIED",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/widget-api/widgets?simplified=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"widget-api",
+						"widgets"
+					],
+					"query": [
+						{
+							"key": "simplified",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] A WIDGET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/widget-api/widgets/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"widget-api",
+						"widgets",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[POST] ADD WIDGET",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"description\": \"some other widget\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/widget-api/widgets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"widget-api",
+						"widgets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[PUT] EDIT A WIDGET",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"modified widget\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/widget-api/widgets/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"widget-api",
+						"widgets",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[DELETE] A WIDGET",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/widget-api/widgets/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"widget-api",
+						"widgets",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] PING",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] ERROR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/error?trigger=on",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"error"
+					],
+					"query": [
+						{
+							"key": "trigger",
+							"value": "on"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
