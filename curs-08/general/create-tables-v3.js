@@ -30,7 +30,7 @@ const Client = sequelize.define(
       validate: {
         len: [3, 20]
       },
-      set(value) {
+      set (value) {
         this.setDataValue('first_name', value.toLowerCase())
       }
     },
@@ -40,19 +40,19 @@ const Client = sequelize.define(
       validate: {
         len: [3, 20]
       },
-      set(value) {
+      set (value) {
         this.setDataValue('last_name', value.toLowerCase())
       }
     }
   },
   {
     getterMethods: {
-      fullName() {
+      fullName () {
         return this.firstname + ' ' + this.lastname
       }
     },
     setterMethods: {
-      fullName(value) {
+      fullName (value) {
         const names = value.split(' ')
         this.setDataValue('firstname', names.slice(0, -1).join(' '))
         this.setDataValue('lastname', names.slice(-1).join(' '))
