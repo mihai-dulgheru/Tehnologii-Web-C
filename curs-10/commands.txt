@@ -1,4 +1,4 @@
-npx create-react-app concepts-app
-cd concepts-app
+npx create-react-app <app-name>
+cd <app-name>
 npm run build
 npm start
