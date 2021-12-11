@@ -3,7 +3,7 @@ import store from './BookStore'
 import BookAddForm from './BookAddForm'
 import Book from './Book'
 
-function BookList() {
+function BookList () {
   const [books, setBooks] = useState([])
 
   useEffect(() => {

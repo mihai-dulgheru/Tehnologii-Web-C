@@ -3,12 +3,12 @@ import { EventEmitter } from 'fbemitter'
 const SERVER = 'http://localhost:8080'
 
 class BookStore {
-  constructor() {
+  constructor () {
     this.data = []
     this.emitter = new EventEmitter()
   }
 
-  async getBooks() {
+  async getBooks () {
     try {
       const response = await fetch(`${SERVER}/books`)
       if (!response.ok) {
@@ -21,7 +21,7 @@ class BookStore {
     }
   }
 
-  async addBook(book) {
+  async addBook (book) {
     try {
       const response = await fetch(`${SERVER}/books`, {
         method: 'POST',
@@ -39,7 +39,7 @@ class BookStore {
     }
   }
 
-  async updateBook(id, book) {
+  async updateBook (id, book) {
     try {
       const response = await fetch(`${SERVER}/books/${id}`, {
         method: 'PUT',
@@ -57,7 +57,7 @@ class BookStore {
     }
   }
 
-  async deleteBook(id) {
+  async deleteBook (id) {
     try {
       const response = await fetch(`${SERVER}/books/${id}`, {
         method: 'DELETE'

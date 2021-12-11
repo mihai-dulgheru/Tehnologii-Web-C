@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function BookAddForm(props) {
+function BookAddForm (props) {
   const { onAdd } = props
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')

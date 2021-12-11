@@ -1,6 +1,6 @@
 import BookList from './BookList'
 
-function App() {
+function App () {
   return (
     <div>
       <BookList />
