@@ -10,8 +10,8 @@ export function getBooks () {
     type: GET_BOOKS,
     payload: async () => {
       const response = await fetch(`${SERVER}/books`)
-      const json = await response.json()
-      return json
+      const data = await response.json()
+      return data
     }
   }
 }
@@ -20,16 +20,16 @@ export function addBook (book) {
   return {
     type: ADD_BOOK,
     payload: async () => {
-      await fetch(`${SERVER}/books`, {
+      let response = await fetch(`${SERVER}/books`, {
         method: 'post',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(book)
       })
-      const response = await fetch(`${SERVER}/books`)
-      const json = await response.json()
-      return json
+      response = await fetch(`${SERVER}/books`)
+      const data = await response.json()
+      return data
     }
   }
 }
