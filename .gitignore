@@ -8,3 +8,9 @@ curs-08/one-to-many/node_modules/
 curs-09/node_modules/
 curs-10/simple-app/server/node_modules/
 curs-11/redux/server/node_modules/
+curs-12/https-example/node_modules/
+curs-12/simple-auth/node_modules/
+curs-12/custom-auth/node_modules/
+curs-12/custom-perms/node_modules/
+curs-12/google-auth/node_modules/
+curs-12/google-auth/.env

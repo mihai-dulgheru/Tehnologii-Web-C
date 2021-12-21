@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "express": "^4.17.2",
+    "moment": "^2.29.1",
+    "sequelize": "^6.12.1",
+    "sqlite3": "^5.0.2"
+  }
+}
