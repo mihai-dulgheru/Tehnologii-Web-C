@@ -1,1 +1,1 @@
-# Tehnologii-Web-C
+# Web Technologies Course
